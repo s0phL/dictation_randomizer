@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice your listening comprehension 
+    by inputting a list of words and having their order randomized and read out to you.">
+    <title>dictation randomizer</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2342a5686f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--button to access help modal-->
+    <button id="info"><i class="fa-solid fa-info"></i></button>
+    <!--help modal-->
+    <div class="modal">
+        <div class="modal-content">
+            <button id="close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 style="text-align: center; margin-bottom: 8px;">Notes:</h3> 
+            <p>
+            <span style="font-weight: bold;">
+            ** Use the space bar to pause/resume audio <br>
+            ** Make sure to start a new line for each new phrase/word <br> 
+            </span>
+            <br>
+            -- Change the speaker with the dropdown menu directly above the text input <br>
+            -- Change the speed of the dictation reading with the slider directly below the text input <br>
+            -- Repeat a randomized order as many times as you want with the repeat button (located next to the randomize button)
+            </p>
+        </div>
+    </div>
+    <!--bg overlay when help modal activated-->
+    <div id="overlay"></div>
+
+    <div class="container">
+        <h1>Dictation Randomizer</h1>
+
+        <!--tts voice selection-->
+        <div>
+            <select></select>
+        </div>
+
+        <textarea placeholder="Type characters here"></textarea>
+        
+        <!--tts voice speed changer-->
+        <div id="rate-control">
+            <label for="rate">Speed:</label>
+            <input type="range" min="0.5" max="2" value="0.5" step="0.1" id="rate"/>
+        </div>
+
+        <div>
+            <div class="row">
+                <button id="randomize">Randomize!</button>
+            </div>
+            <div style="float: right;">
+                <button id="repeat" disabled><i class="fa-solid fa-repeat"></i></button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

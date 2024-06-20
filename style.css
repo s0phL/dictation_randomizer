@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8eefc; 
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+h1 {
+    margin-bottom: 30px;
+}
+
+select {
+    margin-bottom: 18px;
+    color: #757575;
+    height: 20px;
+    flex: 1;
+}
+
+textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: medium;
+    resize: none;
+    width: 10%;
+    min-width: 150px;
+    height: 500px;
+}
+
+.row {
+    margin-left: 25px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #757575;
+    background-color: #ffbc99;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 550;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e3a888;
+}
+
+#repeat {
+    margin-top: 20%;
+    margin-left: 20%;
+    background-color: #facbb1;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+#repeat:hover {
+    background-color: #e3a888;
+}
+
+#rate-control {
+    margin: 1rem 0;
+    font-size: 14px;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#info {
+    position: absolute;
+    right: 0;
+    background: none;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.modal {
+    position: fixed; 
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    max-height: 65%;
+    z-index: 10; 
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    background-color: #fefefe;
+    padding: 20px;
+    font-size: 16px;
+    width: 80%;
+}
+
+#close {
+    background: none;
+    font-size: 26px;
+    color: #aaa;
+    cursor: pointer;
+    float: right;
+    margin-top: -10px;
+}
+#close:hover {
+    color: black;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgb(0,0,0); /* fallback color */
+    background-color: rgba(0,0,0,0.4); /* black w/ opacity*/
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
