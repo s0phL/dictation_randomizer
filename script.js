@@ -46,7 +46,7 @@ if ("speechSynthesis" in window) {
     })
 
     /* on 'Randomize!' button click, randomize user inputted text and output audio of the randomized order */
-    document.getElementById("randomize").addEventListener("click", () =>{
+    document.getElementById("randomize").addEventListener("click", () => {
         if (speechSynthesis.speaking) {
             speechSynthesis.cancel();
         }
@@ -75,7 +75,7 @@ if ("speechSynthesis" in window) {
     }
 
     let paused = false;
-    document.addEventListener("keyup", event =>{
+    document.addEventListener("keyup", event => {
         if (event.code === "Space") {
             if (!paused) {
                 window.speechSynthesis.pause();
@@ -88,7 +88,7 @@ if ("speechSynthesis" in window) {
         }
     })
 
-    document.getElementById("repeat").addEventListener("click", () =>{
+    document.getElementById("repeat").addEventListener("click", () => {
         if (speechSynthesis.speaking) {
             speechSynthesis.cancel();
         }
